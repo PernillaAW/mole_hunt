@@ -33,12 +33,10 @@ public class MainFrame extends JFrame{
         cardLayout.show(mainPanel, panelName);
     }
     public void playAsGuest() {
-        System.out.println("Switching..");
         GameGui gameGui = new GameGui(3);
         gameGui.randomAction();
         mainPanel.add(gameGui, "game");
         setVisible(true);
         showPanel("game");
-        System.out.println("SHOWS!");
     }
 }
