@@ -1,11 +1,7 @@
 package mole_hunt.gui;
 
-import mole_hunt.game.Game;
-import mole_hunt.game.Player;
 
 import javax.swing.*;
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-import javax.swing.plaf.synth.SynthUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,23 +17,39 @@ public class GameGui extends JPanel {
         this.labels = new JLabel[GRIDSIZE][GRIDSIZE];
         this.random = new Random();
         setLayout(new BorderLayout());
-        add(gamePanel(), BorderLayout.NORTH);
+        add(gameTopPanel(), BorderLayout.NORTH);
         add(gameSquare(), BorderLayout.CENTER);
+        add(gameCountPanel(), BorderLayout.EAST);
     }
 
-    public JPanel gamePanel() {
-        JPanel panel = new JPanel(new GridLayout(1, 1));
+    public JPanel gameTopPanel() {
+        JPanel panel = new JPanel(new GridLayout(2, 1));
         panel.setBackground(Color.LIGHT_GRAY);
 
         JLabel gameInfoLabel = new JLabel("Let's play a game of Mole Hunt");
 
+        panel.add(gameInfoLabel);
+
+        return panel;
+    }
+
+    public JPanel gameCountPanel(){
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.setBackground(Color.LIGHT_GRAY);
+
+
         int moleNumber = random.nextInt(500);
 
-        JLabel gameMoleNumberLabel = new JLabel("Your number to collect is: " +  moleNumber);
+        JLabel gameMoleNumberLabel = new JLabel("Your number to collect is: ", SwingConstants.CENTER);
+        gameMoleNumberLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        JLabel gameMoleNumber = new JLabel("" + moleNumber, SwingConstants.CENTER);
+        gameMoleNumber.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        panel.add(gameInfoLabel);
+
         panel.add(gameMoleNumberLabel);
-
+        panel.add(Box.createRigidArea(new Dimension(0,10)));
+        panel.add(gameMoleNumber);
         return panel;
     }
 
