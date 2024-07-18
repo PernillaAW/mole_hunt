@@ -42,7 +42,7 @@ public class Welcome extends JPanel {
 
         JLabel welcomeLabel = new JLabel("Welcome to Mole hunt!", SwingConstants.CENTER);
         welcomeLabel.setFont(new Font("Times", Font.BOLD, 24));
-        welcomeLabel.setForeground(Color.RED);
+        welcomeLabel.setForeground(Color.WHITE);
         welcomeLabel.setBackground(Color.decode("#373F51"));
         welcomeLabel.setOpaque(true);
 
@@ -50,7 +50,7 @@ public class Welcome extends JPanel {
         loginButton.setPreferredSize(new Dimension(200,50));
         loginButton.setMaximumSize(new Dimension(200,50));
         loginButton.setFont(new Font("Serif", Font.PLAIN, 18));
-        loginButton.setForeground(Color.RED);
+        loginButton.setForeground(Color.WHITE);
         loginButton.setBackground(Color.decode("#373F51"));
         loginButton.setFocusPainted(false);
         loginButton.setBorderPainted(false);
@@ -58,7 +58,7 @@ public class Welcome extends JPanel {
         registerButton.setPreferredSize(new Dimension(200,50));
         registerButton.setMaximumSize(new Dimension(200,50));
         registerButton.setFont(new Font("Serif", Font.PLAIN, 18));
-        registerButton.setForeground(Color.RED);
+        registerButton.setForeground(Color.WHITE);
         registerButton.setBackground(Color.decode("#373F51"));
         registerButton.setFocusPainted(false);
         registerButton.setBorderPainted(false);
@@ -66,7 +66,7 @@ public class Welcome extends JPanel {
         guestButton.setPreferredSize(new Dimension(200,50));
         guestButton.setMaximumSize(new Dimension(200,50));
         guestButton.setFont(new Font("Serif", Font.PLAIN, 18));
-        guestButton.setForeground(Color.RED);
+        guestButton.setForeground(Color.WHITE);
         guestButton.setBackground(Color.decode("#373F51"));
         guestButton.setFocusPainted(false);
         guestButton.setBorderPainted(false);
